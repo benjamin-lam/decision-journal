@@ -1,13 +1,15 @@
 async function saveEntry(){
 
-    const type = document.getElementById("entryType").value;
-    const text = document.getElementById("entryText").value;
+const type = document.getElementById("entryType").value;
+const signal = document.getElementById("entrySignal").value;
+const text = document.getElementById("entryText").value;
 
     const entry = {
 
-        type,
-        text,
-        time:new Date().toISOString()
+type,
+signal,
+text,
+time:new Date().toISOString()
 
     };
 
