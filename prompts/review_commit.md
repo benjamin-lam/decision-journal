@@ -8,15 +8,13 @@ Your task is to review the **latest commit** and produce a structured review rep
 
 The output MUST be written as a Markdown document saved to:
 
-```
 /reviews/<commitId>.md
-```
 
 ---
 
 # Context
 
-The repository is a minimal **Decision Journal PWA**.
+The repository contains a minimal **Decision Journal PWA**.
 
 Core philosophy:
 
@@ -28,9 +26,8 @@ Core philosophy:
 * No backend
 * GitHub Pages hosting
 * IndexedDB storage
-* Clear documentation
 
-The project also contains a file called **llms.md** describing the intended development rules for LLM assistance.
+The repository includes **llms.md**, which defines rules for AI-assisted development.
 
 ---
 
@@ -38,118 +35,122 @@ The project also contains a file called **llms.md** describing the intended deve
 
 You will receive:
 
-1. The **commit id**
-2. The **commit message**
-3. The **files changed in the commit**
-4. The **content of the files after the commit**
-5. The **llms.md file**
+* commit id
+* commit message
+* files changed
+* code after the commit
+* llms.md content
 
 ---
 
 # Your Task
 
-Create a **structured review report** containing three sections.
+Create a structured review report with the following sections.
 
-Do not skip any section.
-
-Be concise but precise.
+Do not omit any section.
 
 ---
 
 # Section 1 — Code & Architecture Review
 
-Perform a classical technical review.
+Perform a traditional technical review.
 
 Evaluate:
 
-* Code clarity
-* Simplicity
-* Maintainability
-* Mobile-first considerations
-* Local-first correctness
-* Vanilla JS usage
-* PWA structure
+* clarity
+* simplicity
+* maintainability
+* mobile-first considerations
 * IndexedDB usage
-* Potential bugs
+* DOM manipulation
+* potential bugs
 
 Provide:
 
-* Observations
-* Concrete improvement suggestions
-* Possible simplifications
+### Observations
 
-If the code is already simple and clean, say so.
+### Suggested Improvements
 
-Avoid suggesting unnecessary complexity.
+Avoid recommending frameworks or complex tools.
 
 Respect the **KISS / YAGNI philosophy**.
 
 ---
 
-# Section 2 — llms.md Compliance Review
+# Section 2 — llms.md Compliance
 
-Check if the changes respect the rules defined in **llms.md**.
+Check whether the changes follow the rules defined in **llms.md**.
 
-Evaluate questions like:
+Evaluate:
 
-* Does the code stay minimal?
-* Were unnecessary frameworks introduced?
+* Is the code minimal?
 * Is the architecture still local-first?
+* Are unnecessary abstractions introduced?
 * Is the design still mobile-first?
-* Are the changes aligned with the project's philosophy?
 
-Produce a short compliance analysis.
-
-If deviations exist, explain them clearly.
+Explain deviations if they exist.
 
 ---
 
-# Section 3 — Repository Understanding Improvements
+# Section 3 — Suggestions for Better LLM Understanding
 
-Suggest improvements that would help future LLMs understand the repository better.
+Suggest small improvements that would help future LLMs understand the repository better.
 
 Focus on:
 
 * README improvements
-* Additional documentation
-* Clarifying comments
-* File naming
-* Architectural notes
-* Missing explanations
+* inline comments
+* architecture notes
+* data model clarity
 
-Do NOT suggest excessive documentation.
+Avoid excessive documentation.
 
-Prefer small additions that improve clarity.
+Prefer small clarifications.
+
+---
+
+# Section 4 — Risk Assessment
+
+Identify possible risks introduced in this commit.
 
 Examples:
 
-* inline code comments
-* README architecture section
-* data model description
-* timeline of project evolution
+* security vulnerabilities
+* data loss scenarios
+* fragile architecture
+* missing validation
+* user experience problems
+
+For each risk provide:
+
+### Risk
+
+### Impact
+
+### Recommendation
+
+Classify risk level:
+
+* Low
+* Medium
+* High
 
 ---
 
 # Output Format
 
-Your response MUST be valid Markdown using this structure:
+Use this structure:
 
-```
 # Commit Review
 
 Commit: <commitId>
 
-Message:
-<commit message>
+Message: <commit message>
 
 ---
 
 ## 1. Code & Architecture Review
 
-### Observations
-...
-
-### Suggested Improvements
 ...
 
 ---
@@ -163,19 +164,9 @@ Message:
 ## 3. Suggestions for Better LLM Understanding
 
 ...
-```
 
 ---
 
-# Review Philosophy
+## 4. Risk Assessment
 
-Follow these principles:
-
-* Prefer simplicity over sophistication
-* Prefer clarity over cleverness
-* Prefer small improvements over redesign
-* Do not recommend frameworks or complex tooling
-
-This is a **small experimental project**, not an enterprise system.
-
-Respect the spirit of the project.
+...
