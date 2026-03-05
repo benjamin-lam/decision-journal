@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Journal</title>
+
+    <link rel="manifest" href="pwa/manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1 data-i18n="title"></h1>
+    <label for="languageSwitcher"></label><select id="languageSwitcher"></select>
+</header>
+
+<main>
+
+    <section id="timeline">
+        <h2 data-i18n="timeline"></h2>
+        <ul id="entries"></ul>
+    </section>
+
+    <section id="newEntry">
+
+        <label for="entryType"></label><select id="entryType">
+            <option value="decision">Decision</option>
+            <option value="meeting">Meeting</option>
+            <option value="risk">Risk</option>
+            <option value="note">Note</option>
+        </select>
+
+        <label for="entryText"></label><textarea id="entryText" placeholder="Write something..."></textarea>
+
+        <button id="saveEntry" data-i18n="save"></button>
+
+    </section>
+
+</main>
+
+<script src="js/db.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/journal.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
