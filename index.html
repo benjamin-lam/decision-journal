@@ -19,25 +19,34 @@
 
 <main>
 
-    <section id="timeline">
-        <h2 data-i18n="timeline"></h2>
-        <ul id="entries"></ul>
-    </section>
+<section id="timeline">
+<h2 data-i18n="timeline"></h2>
+<ul id="entries"></ul>
+</section>
 
-    <section id="newEntry">
+<section id="newEntry">
 
-        <label for="entryType"></label><select id="entryType">
-            <option value="decision">Decision</option>
-            <option value="meeting">Meeting</option>
-            <option value="risk">Risk</option>
-            <option value="note">Note</option>
-        </select>
+<label for="entryType"></label>
+<select id="entryType">
+<option value="decision">Decision</option>
+<option value="meeting">Meeting</option>
+<option value="risk">Risk</option>
+<option value="note">Note</option>
+</select>
 
-        <label for="entryText"></label><textarea id="entryText" placeholder="Write something..."></textarea>
+<label for="entrySignal"></label>
+<select id="entrySignal">
+<option value="low">Low</option>
+<option value="medium">Medium</option>
+<option value="high">High</option>
+</select>
 
-        <button id="saveEntry" data-i18n="save"></button>
+<label for="entryText"></label>
+<textarea id="entryText" placeholder="Write something..."></textarea>
 
-    </section>
+<button id="saveEntry" data-i18n="save"></button>
+
+</section>
 
 </main>
 
